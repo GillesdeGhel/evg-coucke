@@ -65,10 +65,11 @@ export default function App() {
             Teamfight Tactics
           </div>
         </div>
-        <div style={{ display: "flex", gap: 24 }}>
+        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
           {["Support", "Status", "Privacy"].map(l => (
             <span key={l} style={{ color: C.muted, fontSize: 12, letterSpacing: 0.5 }}>{l}</span>
           ))}
+          <a href="/regles" style={{ color: C.purple, fontSize: 12, letterSpacing: 0.5, textDecoration: "none", fontWeight: 600 }}>📜 Règles EVG</a>
         </div>
       </nav>
 
