@@ -163,17 +163,39 @@ const ROOMS = [
     icon: "🏦",
     color: "#40DFA0",
     colorDark: "#106040",
-    texte: `Coucke est un programmeur hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là, et quelque part dans ce chaos de code se cache l'indice qui vous permettra de débloquer la suite. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
+    texte: `Coucke est un programmeur hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
     materiel: ["Ordinateur avec bash / terminal ouvert", "Logo Belfius imprimé", "Décoration Belfius"],
+    pieces: [
+      {
+        titre: "Enveloppe #1 — Accès Système",
+        texte: "BELFIUS INTERNAL SYSTEM v2.4.1\n\nVos credentials d'accès :\n\nlogin    : phantom\npassword : DARKN3T\n\n⚠ Accès badge expirant à 06:00. Ne perdez pas de temps.",
+      },
+    ],
     indices: [
-      { num: 1, text: "bash escape" },
-      { num: 2, text: "Login : Phantom" },
-      { num: 3, text: "Password : DARKN3T" },
-      { num: 4, text: "Commande à faire dans l'ordinateur (à préciser selon le script)" },
+      {
+        num: 1,
+        label: "Fragment 1 — Les Journaux",
+        text: "Une connexion suspecte a eu lieu cette nuit. Les journaux réseau enregistrent tout — chaque tentative, chaque intrusion. Le fragment que vous cherchez est un numéro de port. Un port 'normal' fait moins de 1024.",
+      },
+      {
+        num: 2,
+        label: "Fragment 2 — Les Fichiers Cachés",
+        text: "Sur Linux, les fichiers secrets commencent par un point. La commande ls ne les montre pas par défaut. Il existe une option pour afficher absolument tout ce qui se trouve dans un dossier — y compris ce qu'on cherche à dissimuler.",
+      },
+      {
+        num: 3,
+        label: "Fragment 3 — Le Chiffrement",
+        text: "Le dernier fragment a été chiffré. Chaque lettre a été avancée de 3 rangs dans l'alphabet. Pour décoder, il faut reculer de 3. Le terminal dispose d'une commande pour ça.",
+      },
+      {
+        num: 4,
+        label: "Dernier recours — La Commande",
+        text: "Vous avez les 3 fragments ? Le format du code de transfert est : FRAGMENT1-FRAGMENT2-FRAGMENT3. Tapez : transfer [votre code]",
+      },
     ],
     mj: {
-      reponse: "À définir selon le script bash",
-      detail: `Utilisateur dédié macOS limité, Terminal en plein écran.\nArborescence dans /Users/joueur/systeme_banque/ avec vrais fichiers texte.\nCompte en banque : Michel Coucke — 20 000 000€ — Localisation : Dubai.\nRed herrings + fichiers cachés.\nCode PIN de Couckson à trouver.\nSite : https://hackertyper.net/ pour l'ambiance.`,
+      reponse: "Code final : 7734-GHOST-NEXUS → commande : transfer 7734-GHOST-NEXUS",
+      detail: `FRAGMENT 1 : 7734\n→ cd logs → cat access.log → connexion suspecte à 03:47:33, port=7734\n\nFRAGMENT 2 : GHOST\n→ cd accounts → ls -a → cd .vault → cat transfer_key.dat\n(le dossier .vault est caché, invisible sans ls -a)\n\nFRAGMENT 3 : NEXUS\n→ cd tools → ls -a → cat .intercepted.enc → texte chiffré : QHAXV\n→ decode QHAXV 3 → chaque lettre reculée de 3 → NEXUS\n\nCode complet : transfer 7734-GHOST-NEXUS\n\nEaster eggs :\n• cat accounts/michel_coucke.acc → père milliardaire à Dubai (47M€, Lamborghini, villa anti-missile)\n• cat accounts/francois_coucke.acc → OnlyFans, packs TFT à 2h du mat, remboursement bague x3\n\nSi succès : virement de 47 234 891,42€ — badge désactivé, contrat terminé, mariage sauvé 🎉`,
     },
   },
   {
