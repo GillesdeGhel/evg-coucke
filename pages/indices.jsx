@@ -163,7 +163,7 @@ const ROOMS = [
     icon: "🏦",
     color: "#40DFA0",
     colorDark: "#106040",
-    texte: `Coucke est un programmeur hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
+    texte: `Coucke est un data engineer hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
     materiel: ["Ordinateur avec bash / terminal ouvert", "Logo Belfius imprimé", "Décoration Belfius"],
     pieces: [
       {
