@@ -219,6 +219,15 @@ export default function Regles() {
         </div>
       </div>
 
+      {/* ALEX IMAGE */}
+      <div style={{ width: "100%", maxHeight: 420, overflow: "hidden", position: "relative" }}>
+        <img
+          src="/alex.png"
+          alt="Alex au Pays des Merveilles"
+          style={{ width: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block", maxHeight: 420 }}
+        />
+      </div>
+
       {/* CONTENT */}
       <div style={{ maxWidth: 820, margin: "0 auto", padding: "36px 24px 60px" }}>
 
