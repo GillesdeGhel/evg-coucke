@@ -94,6 +94,7 @@ const ROOMS = [
       { num: 1, text: "Ajoute le triathlon de Coucke à la plus longue distance qu'il ait parcourue sur ses jambes." },
       { num: 2, text: "C'était le jour de la saint vierge avec la sienne (de sainte) en l'an de grâce 2023." },
       { num: 3, text: "Pour la trouver, pratique ton suédois : comment dit-on « s'efforcer à faire quelque chose sans relâche » ?" },
+      { num: 4, text: "En 2023, Coucke ne se presse pas." },
     ],
     mj: {
       reponse: "Code cadenas : 2026",
