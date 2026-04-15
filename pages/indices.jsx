@@ -87,6 +87,9 @@ const ROOMS = [
     colorDark: "#1060A0",
     texte: `Bienvenue dans la zone rouge, là où les mollets brûlent et le cardio s'emballe. Vous le savez, Coucke est une véritable machine, prêt à enchaîner les kilomètres. Mais pour ce triathlon ultime, l'épreuve de sa vie, il ne court pas seul : c'est un parcours qu'il affronte en tandem avec sa future femme, Alexia.\n\nLe hic, c'est que l'effort a brouillé son esprit et il a complètement oublié le tracé de la course. Pour retrouver la trace du Super Coucke et débloquer votre indice, vous allez devoir contacter vos partenaires. C'est l'entité de la salle Alex(ia) qui détient le secret de cet itinéraire infernal. Écoutez bien ses indications ! Mais ne raccrochez pas trop vite : pendant que vous étudiez les cartes, fouillez les environs. Vos collègues de l'autre côté du fil sont coincés face à cette IA capricieuse, et c'est ici, parmi l'équipement de sport, que se cachent les indices pour les aider à l'amadouer.`,
     materiel: ["Cartes imprimées de Google Maps", "Indices", "Photo de Coucke ripped as fuck par IA", "Pokéball", "Cadenas 2026 + boîte avec Pokéball"],
+    pieces: [
+      { titre: "Carte du triathlon", image: "/triathlon.png", caption: "Le tracé de la course — Cucq → Étaples → Le Touquet → Golf → ?" },
+    ],
     indices: [
       { num: 1, text: "Ajoute le triathlon de Coucke à la plus longue distance qu'il ait parcourue sur ses jambes." },
       { num: 2, text: "C'était le jour de la saint vierge avec la sienne (de sainte) en l'an de grâce 2023." },
@@ -106,6 +109,9 @@ const ROOMS = [
     colorDark: "#5030A0",
     texte: null,
     materiel: ["QR code vers app Vercel", "Clavier d'ordinateur et souris", "Manette de PlayStation", "Texte de gameur", "Indice de salle Jeux de société"],
+    pieces: [
+      { titre: "QR Code — Accès TFT", image: "/qr-progaming.png", caption: "Scanner pour accéder à la plateforme. Bonne chance." },
+    ],
     indices: [
       { num: 1, text: "Coucke n'est pas très fort en sécurité — en mot de passe il a simplement tapé son gamer tag." },
       { num: 2, text: "Coucke n'est pas très fort en motricité — quand il ne voit pas ce qu'il écrit, il décale souvent ses doigts sur le clavier." },
@@ -125,6 +131,9 @@ const ROOMS = [
     colorDark: "#906000",
     texte: null,
     materiel: ["Jeu d'échecs", "Goban + règles de Goban", "Grille pour montrer le L2", "Jeu de cartes", "Bic encre invisible"],
+    pieces: [
+      { titre: "Grille de Goban", image: "/goban.png", caption: "La pierre manquante parle plus fort que toutes les autres." },
+    ],
     indices: [
       {
         num: 1,
@@ -359,6 +368,12 @@ export default function Indices() {
             break-inside: avoid;
             box-shadow: inset 0 0 20px rgba(180,140,80,0.08);
           }
+          .piece-card.full-width {
+            grid-column: 1 / -1;
+            max-width: 480px;
+            margin: 0 auto;
+            width: 100%;
+          }
           .piece-cut { position: absolute; top: 6px; right: 8px; font-size: 9px; color: #c8a96e; letter-spacing: 0.5px; }
           .piece-titre {
             font-size: 12px; font-weight: 800; text-transform: uppercase;
@@ -437,10 +452,18 @@ export default function Indices() {
                 <div className="section-label">✦ Pièces à imprimer — à découper et placer dans la salle</div>
                 <div className="pieces-grid">
                   {room.pieces.map((piece, pi) => (
-                    <div className="piece-card" key={pi}>
+                    <div className={`piece-card${piece.image ? " full-width" : ""}`} key={pi}>
                       <div className="piece-cut">✂ couper</div>
                       <div className="piece-titre">{piece.titre}</div>
-                      <div className="piece-texte">{piece.texte}</div>
+                      {piece.image && (
+                        <img
+                          src={piece.image}
+                          alt={piece.titre}
+                          style={{ width: "100%", height: "auto", display: "block", marginBottom: piece.caption ? 10 : 0, borderRadius: 2 }}
+                        />
+                      )}
+                      {piece.texte && <div className="piece-texte">{piece.texte}</div>}
+                      {piece.caption && <div style={{ fontSize: 11, color: "#888", fontStyle: "italic", textAlign: "center", marginTop: 8 }}>{piece.caption}</div>}
                     </div>
                   ))}
                 </div>
