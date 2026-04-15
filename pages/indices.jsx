@@ -31,6 +31,24 @@ const ROOMS = [
     colorDark: "#7A40B8",
     texte: `Notre cher fukinwhiterabbit n'est pas fait que de lignes de code et de data. C'est avant tout un explorateur dans l'âme (mais uniquement dans l'âme), qui a passé d'innombrables heures à arpenter des mondes imaginaires et fantastiques. Bienvenue dans son subconscient version Dé N Dé. Ici, les lois de la physique disparaissent au profit de la magie, des messages cryptiques et surtout des lancers de dés.\n\nLa quête qui se dresse devant vous est périlleuse, et vous allez vite réaliser qu'il vous manque des éléments cruciaux pour avancer. Ne paniquez pas : vos partenaires de l'autre côté du miroir, au milieu des herbes hautes de la salle Pokémon, détiennent sûrement les informations arcaniques qu'il vous manque. Lisez bien vos parchemins, faites les bons calculs, et communiquez avec eux pour espérer faire un coup critique.`,
     materiel: ["Livre de fantasy", "Dés (D4, D6, D8, D10, D12, D20)", "Cadenas 3579", "Boîte fermée avec cadenas", "Bougie chauffe-plat", "Briquet", "Truc imprimé en 3D qui dit FLEMME"],
+    pieces: [
+      {
+        titre: "Parchemin I — Le Sang de la Pierre",
+        texte: "Lance la pierre Rouge et retiens sa voix.\nMultiplie ce jet par le produit des faces de la pierre Orange et de la pierre Blanche.\nAjoute à cela toutes les faces de la pierre Jaune.\nDivise ce fardeau par les faces de la pierre Blanche.\nEnfin, retire de ce total autant de fois que possible les faces de la pierre Orange.\nCe qui survit est la clé.",
+      },
+      {
+        titre: "Parchemin II — La Fièvre de l'Or",
+        texte: "Fais rouler la pierre Noire pour connaître ton destin.\nMultiplie ton jet par le produit des faces de la pierre Bleue et de la pierre Blanche.\nOffre à ce nombre la somme des faces de la pierre Rouge et de la pierre Bleue.\nTranche ton œuvre en la divisant par les faces de la pierre Blanche.\nL'excédent qui refuse de former un groupe de la taille de la pierre Bleue t'indiquera la voie.",
+      },
+      {
+        titre: "Parchemin III — Le Souffle du Vide",
+        texte: "Interroge la pierre Orange par un jet.\nQue ce hasard soit multiplié par le produit des faces de la pierre Noire et de la pierre Blanche.\nAjoute l'absolu des faces de la pierre Rouge.\nPartage le tout en le divisant par les faces de la pierre Blanche.\nSeul le reste qui échappe à l'emprise de la pierre Noire brisera le sceau.",
+      },
+      {
+        titre: "Parchemin IV — L'Œil du Néant",
+        texte: "Réveille la pierre Bleue par un jet.\nMultiplie ce nombre par le produit des faces de la pierre Jaune et de la pierre Blanche.\nFais la somme des faces des pierres Rouge, Jaune et Blanche, et joins-la à ton calcul.\nDivise cet horizon par les faces de la pierre Blanche.\nLe fragment solitaire qui échappe à la mesure de la pierre Jaune est éternel.",
+      },
+    ],
     indices: [
       { num: 1, text: "Tout ce qui dépasse le seuil est condamné à disparaître. Ce qui reste après le passage — voilà la vérité." },
       { num: 2, text: "Imagine un mage qui marche en cercle. Son cercle mesure sept pas. Il marche dix-sept pas. Combien de pas le séparent du début ?" },
@@ -324,6 +342,36 @@ export default function Indices() {
           .mj-reponse { font-size: 14px; font-weight: 900; color: #900; margin-bottom: 6px; }
           .mj-detail { font-size: 12px; line-height: 1.75; color: #666; white-space: pre-line; }
 
+          /* ---- PIÈCES À IMPRIMER ---- */
+          .pieces-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 4px;
+          }
+          .piece-card {
+            background: #fdf6e3;
+            border: 2px dashed #c8a96e;
+            border-radius: 2px;
+            padding: 20px 22px;
+            position: relative;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            box-shadow: inset 0 0 20px rgba(180,140,80,0.08);
+          }
+          .piece-cut { position: absolute; top: 6px; right: 8px; font-size: 9px; color: #c8a96e; letter-spacing: 0.5px; }
+          .piece-titre {
+            font-size: 12px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 1px; color: #6b4c11; margin-bottom: 14px;
+            padding-bottom: 10px; border-bottom: 1px solid #d4b483;
+            font-family: Georgia, serif;
+          }
+          .piece-texte {
+            font-size: 13px; line-height: 1.85; color: #3a2a0a;
+            font-style: italic; white-space: pre-line;
+            font-family: Georgia, serif;
+          }
+
           /* ---- PLACEHOLDER ---- */
           .placeholder { border: 2px dashed #e8e8e8; border-radius: 4px; padding: 20px; text-align: center; color: #ccc; font-style: italic; font-size: 13px; }
 
@@ -380,6 +428,22 @@ export default function Indices() {
               <>
                 <div className="section-label">✦ Texte d'introduction</div>
                 <div className="placeholder">Texte à rédiger…</div>
+              </>
+            )}
+
+            {/* PIÈCES À IMPRIMER */}
+            {room.pieces && room.pieces.length > 0 && (
+              <>
+                <div className="section-label">✦ Pièces à imprimer — à découper et placer dans la salle</div>
+                <div className="pieces-grid">
+                  {room.pieces.map((piece, pi) => (
+                    <div className="piece-card" key={pi}>
+                      <div className="piece-cut">✂ couper</div>
+                      <div className="piece-titre">{piece.titre}</div>
+                      <div className="piece-texte">{piece.texte}</div>
+                    </div>
+                  ))}
+                </div>
               </>
             )}
 
