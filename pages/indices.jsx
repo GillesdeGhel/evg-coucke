@@ -125,8 +125,8 @@ const ROOMS = [
       },
     ],
     mj: {
-      reponse: "ALEX (A de l'échiquier en E3, L du Goban en L2, E et X sur l'as de cœur à l'encre invisible)",
-      detail: `Échiquier → mat en E3 → lettre E puis A (case de départ ?) → vérifier\nGoban → pierre manquante en L2 → lettre L\nJeu de cartes → As de cœur avec encre invisible → A et X`,
+      reponse: "ALEX",
+      detail: `A → lettre initiale du mot "As" (la carte)\nL → position L2 sur le Goban → lettre L\nE → position E3 sur l'échiquier (mat) → lettre E\nX → écrit en encre invisible sur l'As de cœur, révélé à la blacklight\n\nOrdre de lecture : As → Goban L2 → Échiquier E3 → Encre invisible\n→ A - L - E - X = ALEX`,
     },
   },
   {
