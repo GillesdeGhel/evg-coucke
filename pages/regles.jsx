@@ -147,7 +147,7 @@ export default function Regles() {
         <img
           src="/alex.png"
           alt="Alex au Pays des Merveilles"
-          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 15%", display: "block" }}
+          style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "75% 15%", display: "block" }}
         />
         {/* Dark gradient overlay for text legibility */}
         <div style={{
