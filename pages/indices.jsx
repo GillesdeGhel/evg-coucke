@@ -52,7 +52,7 @@ const ROOMS = [
     texte: `Bienvenue dans le sanctuaire d'Alex... ou plutôt, dans la matrice de son alter ego numérique. Dans cette dimension, l'amour de sa vie s'est fusionné avec une intelligence artificielle pour devenir Alex(IA). Elle contrôle tout, entend tout, dicte les règles, et elle est particulièrement exigeante aujourd'hui.\n\nVous allez devoir comprendre son langage et réussir à l'amadouer pour qu'elle vous livre votre précieux indice. Si la technologie se retourne contre vous ou que ses caprices vous dépassent, appelez vos partenaires à la rescousse. Ce sont eux, en pleine sueur au milieu d'un triathlon, qui vont dénicher la marche à suivre pour apaiser cette IA rebelle. Et n'oubliez pas le pacte de votre équipe : Alex(IA) possède l'itinéraire exact de leur course. Si vous ne leur dictez pas le bon chemin, ils risquent de courir dans le vide jusqu'à l'épuisement.`,
     materiel: ["Photos d'Alex modifiées par IA partout"],
     indices: [
-      { num: 1, text: "Voici la réponse à vos questions : 24 26 27 45 32 55 46 16 Q 54 29" },
+      { num: 1, text: "Voici la réponse à vos questions : 24 26 27 45 32 55 46 16 Q 54 29, peut-être comprendrez-vous en répondant à ses questions." },
       { num: 2, text: "Prenez gare au lexique de Lexia — ses énigmes vous ouvriront la voie." },
     ],
     mj: {
