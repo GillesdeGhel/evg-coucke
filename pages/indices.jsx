@@ -116,7 +116,7 @@ const ROOMS = [
     indices: [
       { num: 1, text: "Coucke n'est pas très fort en sécurité — en mot de passe il a simplement tapé son gamer tag." },
       { num: 2, text: "Coucke n'est pas très fort en motricité — quand il ne voit pas ce qu'il écrit, il décale souvent ses doigts sur le clavier." },
-      { num: 3, text: "Coucke a tendance à être plutôt à droite qu'à gauche." },
+      { num: 3, text: "Malgré ses apparences, Coucke est de droite." },
     ],
     mj: {
       reponse: "Login : fukinwhiterabbit / Password : gilo,xjoyrtznnoy",
