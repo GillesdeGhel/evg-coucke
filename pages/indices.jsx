@@ -312,18 +312,16 @@ export default function Indices() {
 
           /* ---- MJ SHEET ---- */
           .mj-card {
-            background: #fff5f5; border: 1px dashed #e0a0a0;
-            border-left: 4px solid #DB0007; padding: 16px 20px; margin-top: 10px;
-            position: relative; page-break-inside: avoid; break-inside: avoid;
+            padding: 12px 4px; margin-top: 10px;
           }
           .mj-stamp {
-            position: absolute; top: 8px; right: 12px;
             font-size: 9px; font-weight: 900; color: #DB0007;
             letter-spacing: 2px; text-transform: uppercase;
             border: 1px solid #DB0007; padding: 1px 6px; border-radius: 2px;
+            display: inline-block; margin-bottom: 8px;
           }
-          .mj-title { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #c00; margin-bottom: 8px; }
-          .mj-reponse { font-size: 15px; font-weight: 900; color: #900; margin-bottom: 8px; }
+          .mj-title { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #c00; margin-bottom: 6px; }
+          .mj-reponse { font-size: 14px; font-weight: 900; color: #900; margin-bottom: 6px; }
           .mj-detail { font-size: 12px; line-height: 1.75; color: #666; white-space: pre-line; }
 
           /* ---- PLACEHOLDER ---- */
@@ -418,9 +416,9 @@ export default function Indices() {
               </div>
             )}
 
-            {/* MJ SHEET — screen only, hidden in print */}
+            {/* MJ SHEET */}
             {room.mj && (
-              <div className="mj-card no-print">
+              <div className="mj-card">
                 <div className="mj-stamp">MJ seulement</div>
                 <div className="mj-title">Solution / Notes MJ</div>
                 <div className="mj-reponse">→ {room.mj.reponse}</div>
