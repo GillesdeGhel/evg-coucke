@@ -9,6 +9,7 @@ const ROOMS = [
     color: "#F7D02C",
     colorDark: "#B8960C",
     texte: `Depuis qu'il est haut comme trois pommes, Coucke nourrit une passion des Pokémon. Des cours de récréation avec son Game Boy jusqu'à aujourd'hui, il n'a tout simplement jamais arrêté de les traquer et de les capturer. Son cerveau a matérialisé ici une équipe bien particulière, mais la route est barrée.\n\nPour déverrouiller l'accès à la salle suivante et obtenir votre indice, vous n'avez pas le choix. Vous connaissez sa devise par cœur : il va falloir tous les attraper ! Étudiez ces créatures, et prouvez que vous êtes de meilleurs dresseurs que lui.\n\nMais attention, votre mission ne s'arrête pas là : outre la fantaisie de cet univers Pokémon, vous allez devoir trouver des indices vitaux cachés ici pour aider vos partenaires. Décrochez votre talkie-walkie, car ils sont actuellement perdus dans un univers fantastique et sans vous, ils ne survivront pas à leur lancer de dés.`,
+    parcours: 2, etape: 3, suivante: "The Belfius Heist",
     materiel: ["Pokémon 3D", "Pokéball", "QR code", "Feuille imprimée d'intro"],
     indices: [
       { num: 1, text: "Trouve les Couckémons et mets-les dans l'ordre. En suivant les instructions tu trouveras ta prochaine action." },
@@ -30,6 +31,7 @@ const ROOMS = [
     color: "#C890F8",
     colorDark: "#7A40B8",
     texte: `Notre cher fukinwhiterabbit n'est pas fait que de lignes de code et de data. C'est avant tout un explorateur dans l'âme (mais uniquement dans l'âme), qui a passé d'innombrables heures à arpenter des mondes imaginaires et fantastiques. Bienvenue dans son subconscient version Dé N Dé. Ici, les lois de la physique disparaissent au profit de la magie, des messages cryptiques et surtout des lancers de dés.\n\nLa quête qui se dresse devant vous est périlleuse, et vous allez vite réaliser qu'il vous manque des éléments cruciaux pour avancer. Ne paniquez pas : vos partenaires de l'autre côté du miroir, au milieu des herbes hautes de la salle Pokémon, détiennent sûrement les informations arcaniques qu'il vous manque. Lisez bien vos parchemins, faites les bons calculs, et communiquez avec eux pour espérer faire un coup critique.`,
+    parcours: 1, etape: 3, suivante: "La Flamme de la Flemme",
     materiel: ["Livre de fantasy", "Dés (D4, D6, D8, D10, D12, D20)", "Cadenas 3579", "Boîte fermée avec cadenas", "Bougie chauffe-plat", "Briquet", "Truc imprimé en 3D qui dit FLEMME"],
     pieces: [
       {
@@ -68,6 +70,7 @@ const ROOMS = [
     color: "#FF6B8A",
     colorDark: "#B02040",
     texte: `Bienvenue dans le sanctuaire d'Alex... ou plutôt, dans la matrice de son alter ego numérique. Dans cette dimension, l'amour de sa vie s'est fusionné avec une intelligence artificielle pour devenir Alex(IA). Elle contrôle tout, entend tout, dicte les règles, et elle est particulièrement exigeante aujourd'hui.\n\nVous allez devoir comprendre son langage et réussir à l'amadouer pour qu'elle vous livre votre précieux indice. Si la technologie se retourne contre vous ou que ses caprices vous dépassent, appelez vos partenaires à la rescousse. Ce sont eux, en pleine sueur au milieu d'un triathlon, qui vont dénicher la marche à suivre pour apaiser cette IA rebelle. Et n'oubliez pas le pacte de votre équipe : Alex(IA) possède l'itinéraire exact de leur course. Si vous ne leur dictez pas le bon chemin, ils risquent de courir dans le vide jusqu'à l'épuisement.`,
+    parcours: 1, etape: 2, suivante: "Fantasticouck",
     materiel: ["Photos d'Alex modifiées par IA partout"],
     indices: [
       { num: 1, text: "Voici la réponse à vos questions : 24 26 27 45 32 55 46 16 Q 54 29, peut-être comprendrez-vous en répondant à ses questions." },
@@ -86,6 +89,7 @@ const ROOMS = [
     color: "#60C8F5",
     colorDark: "#1060A0",
     texte: `Bienvenue dans la zone rouge, là où les mollets brûlent et le cardio s'emballe. Vous le savez, Coucke est une véritable machine, prêt à enchaîner les kilomètres. Mais pour ce triathlon ultime, l'épreuve de sa vie, il ne court pas seul : c'est un parcours qu'il affronte en tandem avec sa future femme, Alexia.\n\nLe hic, c'est que l'effort a brouillé son esprit et il a complètement oublié le tracé de la course. Pour retrouver la trace du Super Coucke et débloquer votre indice, vous allez devoir contacter vos partenaires. C'est l'entité de la salle Alex(ia) qui détient le secret de cet itinéraire infernal. Écoutez bien ses indications ! Mais ne raccrochez pas trop vite : pendant que vous étudiez les cartes, fouillez les environs. Vos collègues de l'autre côté du fil sont coincés face à cette IA capricieuse, et c'est ici, parmi l'équipement de sport, que se cachent les indices pour les aider à l'amadouer.`,
+    parcours: 2, etape: 2, suivante: "Couckémons",
     materiel: ["Cartes imprimées de Google Maps", "Indices", "Photo de Coucke ripped as fuck par IA", "Pokéball", "Cadenas 2026 + boîte avec Pokéball"],
     pieces: [
       { titre: "Carte du triathlon", image: "/triathlon.png", caption: "Le tracé de la course — Cucq → Étaples → Le Touquet → Golf → ?" },
@@ -109,6 +113,7 @@ const ROOMS = [
     color: "#A080F8",
     colorDark: "#5030A0",
     texte: null,
+    parcours: 2, etape: 1, suivante: 'Le "Triathlon"',
     materiel: ["QR code vers app Vercel", "Clavier d'ordinateur et souris", "Manette de PlayStation", "Texte de gameur", "Indice de salle Jeux de société"],
     pieces: [
       { titre: "QR Code — Accès TFT", image: "/qr-progaming.png", caption: "Scanner pour accéder à la plateforme. Bonne chance." },
@@ -131,6 +136,7 @@ const ROOMS = [
     color: "#F0C060",
     colorDark: "#906000",
     texte: null,
+    parcours: 1, etape: 1, suivante: "Alex(ia)",
     materiel: ["Jeu d'échecs", "Goban + règles de Goban", "Grille pour montrer le L2", "Jeu de cartes", "Bic encre invisible"],
     pieces: [
       { titre: "Grille de Goban", image: "/goban.png", caption: "La pierre manquante parle plus fort que toutes les autres." },
@@ -165,6 +171,7 @@ const ROOMS = [
     color: "#40DFA0",
     colorDark: "#106040",
     texte: `Coucke est un data engineer hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
+    parcours: 2, etape: 4, suivante: null,
     materiel: ["Ordinateur avec bash / terminal ouvert", "Logo Belfius imprimé", "Décoration Belfius"],
     pieces: [
       {
@@ -207,6 +214,7 @@ const ROOMS = [
     color: "#FF8040",
     colorDark: "#A03010",
     texte: null,
+    parcours: 1, etape: 4, suivante: null,
     materiel: ["Blacklight (lampe UV)", "Lampe de chevet", "Google Home", "Prise connectée", "Horloge à aiguille", "Marqueur à encre invisible"],
     indices: [
       { num: 1, text: "Ce flemmard de Coucke ne doit même plus se lever de son lit pour gérer sa maison." },
@@ -374,6 +382,44 @@ export default function Indices() {
           .mj-reponse { font-size: 14px; font-weight: 900; color: #900; margin-bottom: 6px; }
           .mj-detail { font-size: 12px; line-height: 1.75; color: #666; white-space: pre-line; }
 
+          /* ---- PARCOURS TABLE ---- */
+          .parcours-table {
+            background: white; border: 1px solid #ddd; border-radius: 4px;
+            overflow: hidden; margin-bottom: 40px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+          }
+          .parcours-table-title {
+            background: #111827; color: white; padding: 12px 20px;
+            font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+          }
+          .parcours-table table { width: 100%; border-collapse: collapse; }
+          .parcours-table th {
+            background: #f5f5f5; padding: 10px 14px; font-size: 11px;
+            font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+            color: #666; border-bottom: 1px solid #e0e0e0; text-align: left;
+          }
+          .parcours-table td {
+            padding: 12px 14px; font-size: 13px; border-bottom: 1px solid #f0f0f0;
+            vertical-align: middle;
+          }
+          .parcours-table tr:last-child td { border-bottom: none; }
+          .p-badge {
+            display: inline-block; padding: 2px 10px; border-radius: 20px;
+            font-size: 10px; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 1px; color: white; margin-right: 6px;
+          }
+          .step-cell { display: flex; align-items: center; gap: 8px; }
+          .step-icon { font-size: 18px; }
+          .step-name { font-weight: 600; color: #111; }
+          .arrow { color: #ccc; font-size: 16px; }
+
+          /* ---- NEXT ROOM BADGE ---- */
+          .next-room {
+            margin-left: auto; font-size: 11px; font-weight: 600;
+            color: rgba(255,255,255,0.7); display: flex; align-items: center; gap: 6px;
+          }
+          .next-room strong { color: white; }
+
           /* ---- PIÈCES À IMPRIMER ---- */
           .pieces-grid {
             display: grid;
@@ -439,6 +485,61 @@ export default function Indices() {
       </div>
 
       <div className="page-wrapper">
+
+        {/* PARCOURS OVERVIEW */}
+        <div className="parcours-table no-print">
+          <div className="parcours-table-title">🗺 Carte des parcours</div>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Étape 1</th>
+                <th></th>
+                <th>Étape 2</th>
+                <th></th>
+                <th>Étape 3</th>
+                <th></th>
+                <th>Étape 4</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  label: "Parcours 1", color: "#2E6CB8",
+                  steps: [
+                    { name: "Jeux de Société", icon: "🎲" },
+                    { name: "Alex(ia)", icon: "♥" },
+                    { name: "Fantasticouck", icon: "✨" },
+                    { name: "La Flamme de la Flemme", icon: "🔥" },
+                  ]
+                },
+                {
+                  label: "Parcours 2", color: "#106040",
+                  steps: [
+                    { name: "Pro-Gaming", icon: "🎮" },
+                    { name: 'Le "Triathlon"', icon: "🏊" },
+                    { name: "Couckémons", icon: "⚡" },
+                    { name: "The Belfius Heist", icon: "🏦" },
+                  ]
+                }
+              ].map(p => (
+                <tr key={p.label}>
+                  <td><span className="p-badge" style={{ background: p.color }}>{p.label}</span></td>
+                  {p.steps.map((s, si) => [
+                    <td key={`s${si}`}>
+                      <div className="step-cell">
+                        <span className="step-icon">{s.icon}</span>
+                        <span className="step-name">{s.name}</span>
+                      </div>
+                    </td>,
+                    si < p.steps.length - 1 && <td key={`a${si}`} className="arrow">→</td>
+                  ])}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {ROOMS.map((room, i) => (
           <div key={room.id} className={`room-section${i > 0 && i % 2 === 0 ? " page-break" : ""}`}>
 
@@ -447,9 +548,15 @@ export default function Indices() {
               <span className="room-header-icon">{room.icon}</span>
               <div>
                 <div className="room-header-title">{room.name}</div>
-                <div className="room-header-sub">{room.subtitle}</div>
+                <div className="room-header-sub">
+                  {room.parcours && <span style={{ marginRight: 8, opacity: 0.75 }}>Parcours {room.parcours} · Étape {room.etape}</span>}
+                  {room.subtitle}
+                </div>
               </div>
-              <div className="room-header-num">{String(room.id).padStart(2, "0")}</div>
+              {room.suivante
+                ? <div className="next-room">Salle suivante → <strong>{room.suivante}</strong></div>
+                : <div className="next-room">🏁 <strong>Fin du parcours</strong></div>
+              }
             </div>
 
             {/* TEXTE D'INTRO */}
