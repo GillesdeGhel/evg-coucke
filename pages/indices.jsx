@@ -143,7 +143,7 @@ const ROOMS = [
       {
         num: 2,
         label: "Parchemin II — Le Goban",
-        text: "Une pierre manque. Le plateau est incomplet, le territoire instable. La pierre absente parle plus fort que toutes les autres. Là où elle doit reposer — commence ta lecture. [IMAGE : grille Goban avec pierre manquante à L2]",
+        text: "Une pierre manque. Le plateau est incomplet, le territoire instable. La pierre absente parle plus fort que toutes les autres. Là où elle doit reposer — commence ta lecture.",
       },
       {
         num: 3,
