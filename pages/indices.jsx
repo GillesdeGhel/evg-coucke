@@ -81,7 +81,7 @@ const ROOMS = [
     ],
     mj: {
       reponse: "Réponse aux énigmes : Sommeil / Confiance / Carte / Lunettes / Excuses → Code final : FANTASTIQUE",
-      detail: `Énigme 1 : "Je suis le seul voyage où si Coucke part c'est aussi Coucke qui attend. Plus il me cherche, plus je me cache, et je meurs le matin." → SOMMEIL\nÉnigme 2 : "Coucke l'a trop prise et est à risque de la perdre. Les enfants me donnent aux inconnus, les adultes en sont plus avares." → CONFIANCE\nÉnigme 3 : "J'ai des villes mais pas de maisons. J'ai des forêts mais pas d'arbres. J'ai des routes mais pas de voitures. J'ai des boulangeries mais je n'ai pas de Coucke." → CARTE\nÉnigme 4 : "Coucke ne me porte pas toujours, mais sans moi il ne voit plus le positif." → LUNETTES\nÉnigme 5 : "Faites pour s'en servir, Coucke les use à tort et à travers. À la vraie Alexia de temps en temps il les présentera." → EXCUSES\n\nDécodage du code "24 26 27 45 32 55 46 16 Q 54 29" :\nChaque nombre = numéro de réponse + numéro de lettre dans ce mot.\n\n  24 → réponse 2 (CONFIANCE), lettre 4 → F\n  26 → réponse 2 (CONFIANCE), lettre 6 → A\n  27 → réponse 2 (CONFIANCE), lettre 7 → N\n  45 → réponse 4 (LUNETTES),  lettre 5 → T\n  32 → réponse 3 (CARTE),     lettre 2 → A\n  55 → réponse 5 (EXCUSES),   lettre 5 → S\n  46 → réponse 4 (LUNETTES),  lettre 6 → T\n  16 → réponse 1 (SOMMEIL),   lettre 6 → I\n   Q → la lettre Q directement\n  54 → réponse 5 (EXCUSES),   lettre 4 → U\n  29 → réponse 2 (CONFIANCE), lettre 9 → E\n\n→ F-A-N-T-A-S-T-I-Q-U-E = FANTASTIQUE\n\nRéponse finale : "Ok super, vous avez tout ce qu'il faut pour décoder mon code !"`,
+      detail: `Énigme 1 : "Je suis le seul voyage où si Coucke part c'est aussi Coucke qui attend. Plus il me cherche, plus je me cache, et je meurs le matin." → SOMMEIL\nÉnigme 2 : "Coucke l'a trop prise et est à risque de la perdre. Les enfants me donnent aux inconnus, les adultes en sont plus avares." → CONFIANCE\nÉnigme 3 : "J'ai des villes mais pas de maisons. J'ai des forêts mais pas d'arbres. J'ai des routes mais pas de voitures. J'ai des boulangeries mais je n'ai pas de Coucke." → CARTE\nÉnigme 4 : "Coucke ne me porte pas toujours, mais sans moi il est négatif." → LUNETTES\nÉnigme 5 : "Faites pour s'en servir, Coucke les use à tort et à travers. À la vraie Alexia de temps en temps il les présentera." → EXCUSES\n\nDécodage du code "24 26 27 45 32 55 46 16 Q 54 29" :\nChaque nombre = numéro de réponse + numéro de lettre dans ce mot.\n\n  24 → réponse 2 (CONFIANCE), lettre 4 → F\n  26 → réponse 2 (CONFIANCE), lettre 6 → A\n  27 → réponse 2 (CONFIANCE), lettre 7 → N\n  45 → réponse 4 (LUNETTES),  lettre 5 → T\n  32 → réponse 3 (CARTE),     lettre 2 → A\n  55 → réponse 5 (EXCUSES),   lettre 5 → S\n  46 → réponse 4 (LUNETTES),  lettre 6 → T\n  16 → réponse 1 (SOMMEIL),   lettre 6 → I\n   Q → la lettre Q directement\n  54 → réponse 5 (EXCUSES),   lettre 4 → U\n  29 → réponse 2 (CONFIANCE), lettre 9 → E\n\n→ F-A-N-T-A-S-T-I-Q-U-E = FANTASTIQUE\n\nRéponse finale : "Ok super, vous avez tout ce qu'il faut pour décoder mon code !"`,
     },
   },
   {
@@ -104,8 +104,8 @@ const ROOMS = [
       { num: 4, text: "En 2023, Coucke ne se presse pas." },
     ],
     mj: {
-      reponse: "Code cadenas : 2026",
-      detail: `Parcours triathlon :\n• Départ : Super Cucq\n• Étape 1 : Étaples\n• Étape 2 : La plage (sans voir la tour Eiffel → Côte d'Opale, pas Paris)\n• Étape 3 : Travaille son swing (golf ?)\n• Fin : Trois pattes\n\nStrava Coucke : https://www.strava.com/athletes/49651259`,
+      reponse: "Code cadenas : 2917",
+      detail: `Parcours triathlon :\n• Le parcours fait un 9 (forme de la trace sur la carte)\n• Départ : Super Cucq\n• Étape 1 : Étaples\n• Étape 2 : La plage (sans voir la tour Eiffel → Côte d'Opale, pas Paris)\n• Étape 3 : Travaille son swing (golf ?)\n• Fin : Trois pattes\n\nStrava Coucke : https://www.strava.com/athletes/49651259\n\nCode cadenas : Coucke a couru 20,17 km → distance triathlon (9 km) + course Strava = 29,17 km → 2917`,
     },
   },
   {
@@ -119,7 +119,7 @@ const ROOMS = [
     parcours: 2, etape: 1, suivante: 'Le "Triathlon"', binome: "Jeux de Société",
     materiel: ["QR code vers app Vercel", "Clavier d'ordinateur et souris", "Manette de PlayStation", "Texte de gameur", "Indice de salle Jeux de société"],
     pieces: [
-      { titre: "QR Code — Accès TFT", image: "/qr-progaming.png", caption: "Scanner pour accéder à la plateforme. Bonne chance." },
+      { titre: "QR Code — Accès TFT", image: "/qr-progaming.png", caption: "Scanner pour accéder à la plateforme. Bonne chance.", small: true },
     ],
     indices: [
       { num: 1, text: "Coucke n'est pas très fort en sécurité — en mot de passe il a simplement tapé son gamer tag." },
@@ -180,6 +180,11 @@ const ROOMS = [
       {
         titre: "Enveloppe #1 — Accès Système",
         texte: "BELFIUS INTERNAL SYSTEM v2.4.1\n\nVos credentials d'accès :\n\nlogin    : phantom\npassword : DARKN3T\n\n⚠ Accès badge expirant à 06:00. Ne perdez pas de temps.",
+      },
+      {
+        titre: "Guide des commandes — Terminal Belfius",
+        terminal: true,
+        texte: "NAVIGUER\nls               → lister les fichiers du dossier\nls -a            → afficher aussi les fichiers cachés\ncd nom_dossier   → entrer dans un dossier\ncd ..            → remonter d'un niveau\npwd              → afficher où on est\n\nLIRE\ncat nom_fichier  → afficher le contenu d'un fichier\n\nCHERCHER\nfind . -name \"*mot*\"   → chercher un fichier par nom",
       },
     ],
     indices: [
@@ -286,13 +291,10 @@ export default function Indices() {
             background: #111827;
             color: white;
             padding: 0 28px;
-            height: 54px;
+            min-height: 54px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 200;
             box-shadow: 0 2px 12px rgba(0,0,0,0.4);
           }
           .no-print h1 { font-size: 14px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
@@ -422,7 +424,7 @@ export default function Indices() {
 
           /* ---- PARCOURS MAP ---- */
           .parcours-map {
-            background: #111827; border-radius: 8px; padding: 24px 28px;
+            background: #111827; border-radius: 8px; padding: 32px 36px;
             margin-bottom: 40px; color: white;
             overflow-x: auto;
           }
@@ -530,6 +532,17 @@ export default function Indices() {
             margin: 0 auto;
             width: 100%;
           }
+          .piece-card.small-print {
+            grid-column: 1 / -1;
+            max-width: 160px;
+            margin: 0 auto;
+            width: 100%;
+          }
+          @media print {
+            .piece-card.small-print {
+              max-width: 120px;
+            }
+          }
           .piece-cut { position: absolute; top: 6px; right: 8px; font-size: 9px; color: #c8a96e; letter-spacing: 0.5px; }
           .piece-titre {
             font-size: 12px; font-weight: 800; text-transform: uppercase;
@@ -578,67 +591,54 @@ export default function Indices() {
         <div className="parcours-map no-print">
           <div className="parcours-map-title">🗺 Carte des parcours</div>
 
-          {[
-            {
-              label: "Parcours 1", color: "#2E6CB8",
-              steps: [
-                { name: "Jeux de Société", icon: "🎲" },
-                { name: "Alex(ia)", icon: "♥" },
-                { name: "Fantasticouck", icon: "✨" },
-                { name: "La Flamme de la Flemme", icon: "🔥" },
-              ]
-            },
-            {
-              label: "Parcours 2", color: "#106040",
-              steps: [
-                { name: "Pro-Gaming", icon: "🎮" },
-                { name: 'Le "Triathlon"', icon: "🏊" },
-                { name: "Couckémons", icon: "⚡" },
-                { name: "The Belfius Heist", icon: "🏦" },
-              ]
-            }
-          ].map(p => (
-            <div className="parcours-row" key={p.label} style={{ marginBottom: 10 }}>
-              <span className="parcours-label" style={{ background: p.color, marginRight: 12 }}>{p.label}</span>
-              <div className="parcours-steps">
-                {p.steps.map((s, si) => (
-                  <div key={si} style={{ display: "flex", alignItems: "center" }}>
-                    <div className="p-step">
-                      <div className="p-step-icon">{s.icon}</div>
-                      <div className="p-step-name">{s.name}</div>
-                      <div className="p-step-num">Étape {si + 1}</div>
-                    </div>
-                    {si < p.steps.length - 1
-                      ? <div className="p-arrow">→</div>
-                      : <div className="p-arrow-loop" title="Boucle vers le début">↩</div>
-                    }
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div style={{ display: "grid", gridTemplateColumns: "70px repeat(4, 1fr)", gap: 6 }}>
 
-          <div className="binome-rows">
-            <div className="binome-title">🔗 Salles simultanées — même étape, équipes différentes</div>
-            <div className="binome-grid">
-              {[
-                { etape: 1, p1: { name: "Jeux de Société", icon: "🎲", color: "#906000" }, p2: { name: "Pro-Gaming", icon: "🎮", color: "#5030A0" } },
-                { etape: 2, p1: { name: "Alex(ia)", icon: "♥", color: "#B02040" }, p2: { name: 'Le "Triathlon"', icon: "🏊", color: "#1060A0" } },
-                { etape: 3, p1: { name: "Fantasticouck", icon: "✨", color: "#7A40B8" }, p2: { name: "Couckémons", icon: "⚡", color: "#B8960C" } },
-                { etape: 4, p1: { name: "La Flamme de la Flemme", icon: "🔥", color: "#A03010" }, p2: { name: "The Belfius Heist", icon: "🏦", color: "#106040" } },
-              ].map(b => (
-                <div className="binome-card" key={b.etape}>
-                  <div className="binome-card-step">Étape {b.etape}</div>
-                  <div className="binome-room" style={{ background: b.p1.color + "33", border: `1px solid ${b.p1.color}66` }}>
-                    {b.p1.icon} {b.p1.name}
-                  </div>
-                  <div className="binome-vs">↕ simultané</div>
-                  <div className="binome-room" style={{ background: b.p2.color + "33", border: `1px solid ${b.p2.color}66` }}>
-                    {b.p2.icon} {b.p2.name}
-                  </div>
-                </div>
-              ))}
+            {/* Row 1 — headers */}
+            <div />
+            {["Étape 1", "Étape 2", "Étape 3", "Étape 4 ↩"].map(e => (
+              <div key={e} style={{ textAlign: "center", fontSize: 10, fontWeight: 800, textTransform: "uppercase", letterSpacing: 2, color: "#6B7280", paddingBottom: 6 }}>
+                {e}
+              </div>
+            ))}
+
+            {/* Row 2 — Parcours 1 */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ background: "#2E6CB8", color: "white", fontSize: 10, fontWeight: 800, textTransform: "uppercase", letterSpacing: 1, padding: "4px 8px", borderRadius: 4 }}>P1</span>
             </div>
+            {[
+              { name: "Jeux de Société", icon: "🎲", color: "#906000" },
+              { name: "Alex(ia)", icon: "♥", color: "#B02040" },
+              { name: "Fantasticouck", icon: "✨", color: "#7A40B8" },
+              { name: "Flamme de la Flemme", icon: "🔥", color: "#A03010" },
+            ].map((s, i) => (
+              <div key={i} style={{ background: s.color + "25", border: `1px solid ${s.color}55`, borderRadius: 6, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ fontSize: 22, flexShrink: 0 }}>{s.icon}</span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "white", lineHeight: 1.4 }}>{s.name}</span>
+              </div>
+            ))}
+
+            {/* Row 3 — simultané */}
+            <div />
+            {[1, 2, 3, 4].map(i => (
+              <div key={i} style={{ textAlign: "center", padding: "2px 0", fontSize: 11, color: "#4B5563", fontWeight: 700 }}>↕</div>
+            ))}
+
+            {/* Row 4 — Parcours 2 */}
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <span style={{ background: "#106040", color: "white", fontSize: 10, fontWeight: 800, textTransform: "uppercase", letterSpacing: 1, padding: "4px 8px", borderRadius: 4 }}>P2</span>
+            </div>
+            {[
+              { name: "Pro-Gaming", icon: "🎮", color: "#5030A0" },
+              { name: 'Le "Triathlon"', icon: "🏊", color: "#1060A0" },
+              { name: "Couckémons", icon: "⚡", color: "#B8960C" },
+              { name: "The Belfius Heist", icon: "🏦", color: "#106040" },
+            ].map((s, i) => (
+              <div key={i} style={{ background: s.color + "25", border: `1px solid ${s.color}55`, borderRadius: 6, padding: "20px 16px", display: "flex", alignItems: "center", gap: 10 }}>
+                <span style={{ fontSize: 22, flexShrink: 0 }}>{s.icon}</span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "white", lineHeight: 1.4 }}>{s.name}</span>
+              </div>
+            ))}
+
           </div>
         </div>
 
@@ -673,6 +673,28 @@ export default function Indices() {
               )}
             </div>
 
+            {/* PANNEAU DE PORTE */}
+            <div className="section-label">✦ Panneau de porte — à coller à l'entrée</div>
+            <div style={{
+              border: `4px solid ${room.color}`,
+              borderRadius: 12,
+              padding: "40px 32px",
+              marginBottom: 10,
+              textAlign: "center",
+              background: `${room.colorDark}22`,
+              pageBreakInside: "avoid",
+              breakInside: "avoid",
+              position: "relative",
+            }}>
+              <div style={{ position: "absolute", top: 8, right: 12, fontSize: 9, color: "#bbb", letterSpacing: 1, textTransform: "uppercase" }}>✂ découper</div>
+              <div style={{ fontSize: 64, marginBottom: 16 }}>{room.icon}</div>
+              <div style={{ fontSize: 32, fontWeight: 900, textTransform: "uppercase", letterSpacing: 2, color: room.colorDark, lineHeight: 1.2, marginBottom: 10 }}>
+                {room.name}
+              </div>
+              <div style={{ fontSize: 14, color: "#555", fontStyle: "italic" }}>{room.subtitle}</div>
+              <div style={{ marginTop: 20, height: 4, borderRadius: 2, background: `linear-gradient(90deg, transparent, ${room.color}, transparent)` }} />
+            </div>
+
             {/* TEXTE D'INTRO */}
             {room.texte ? (
               <>
@@ -696,7 +718,47 @@ export default function Indices() {
                 <div className="section-label">✦ Pièces à imprimer — à découper et placer dans la salle</div>
                 <div className="pieces-grid">
                   {room.pieces.map((piece, pi) => (
-                    <div className={`piece-card${piece.image ? " full-width" : ""}`} key={pi}>
+                    piece.terminal ? (
+                      <div key={pi} style={{ gridColumn: "1 / -1", background: "#0d1117", border: "1px solid #30363d", borderRadius: 8, overflow: "hidden", pageBreakInside: "avoid", breakInside: "avoid" }}>
+                        {/* Terminal title bar */}
+                        <div style={{ background: "#161b22", borderBottom: "1px solid #30363d", padding: "8px 14px", display: "flex", alignItems: "center", gap: 8 }}>
+                          <div style={{ display: "flex", gap: 6 }}>
+                            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
+                            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
+                            <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
+                          </div>
+                          <span style={{ fontSize: 11, color: "#8b949e", fontFamily: "monospace", marginLeft: 8 }}>phantom@belfius-system — bash</span>
+                          <div style={{ marginLeft: "auto", fontSize: 9, color: "#555", letterSpacing: 0.5 }}>✂ couper</div>
+                        </div>
+                        {/* Terminal body */}
+                        <div style={{ padding: "16px 20px" }}>
+                          <div style={{ fontSize: 11, color: "#8b949e", fontFamily: "monospace", marginBottom: 12, letterSpacing: 1, textTransform: "uppercase" }}>// {piece.titre}</div>
+                          {piece.texte.split("\n\n").map((block, bi) => (
+                            <div key={bi} style={{ marginBottom: 16 }}>
+                              {block.split("\n").map((line, li) => {
+                                const isSection = line === line.toUpperCase() && !line.includes("→") && line.trim().length > 0;
+                                const isCommand = !isSection && line.trim().length > 0;
+                                const parts = line.split("→");
+                                return (
+                                  <div key={li} style={{ fontFamily: "monospace", fontSize: 12, lineHeight: 1.8 }}>
+                                    {isSection ? (
+                                      <span style={{ color: "#58a6ff", fontWeight: 700, fontSize: 10, letterSpacing: 2 }}>{line}</span>
+                                    ) : isCommand ? (
+                                      <>
+                                        <span style={{ color: "#3fb950" }}>$ </span>
+                                        <span style={{ color: "#e6edf3" }}>{parts[0]}</span>
+                                        {parts[1] && <span style={{ color: "#8b949e" }}>→{parts[1]}</span>}
+                                      </>
+                                    ) : null}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                    <div className={`piece-card${piece.small ? " small-print" : piece.image ? " full-width" : ""}`} key={pi}>
                       <div className="piece-cut">✂ couper</div>
                       <div className="piece-titre">{piece.titre}</div>
                       {piece.image && (
@@ -709,6 +771,7 @@ export default function Indices() {
                       {piece.texte && <div className="piece-texte">{piece.texte}</div>}
                       {piece.caption && <div style={{ fontSize: 11, color: "#888", fontStyle: "italic", textAlign: "center", marginTop: 8 }}>{piece.caption}</div>}
                     </div>
+                    )
                   ))}
                 </div>
               </>
