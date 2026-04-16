@@ -11,6 +11,9 @@ const ROOMS = [
     texte: `Depuis qu'il est haut comme trois pommes, Coucke nourrit une passion des Pokémon. Des cours de récréation avec son Game Boy jusqu'à aujourd'hui, il n'a tout simplement jamais arrêté de les traquer et de les capturer. Son cerveau a matérialisé ici une équipe bien particulière, mais la route est barrée.\n\nPour déverrouiller l'accès à la salle suivante et obtenir votre indice, vous n'avez pas le choix. Vous connaissez sa devise par cœur : il va falloir tous les attraper ! Étudiez ces créatures, et prouvez que vous êtes de meilleurs dresseurs que lui.\n\nMais attention, votre mission ne s'arrête pas là : outre la fantaisie de cet univers Pokémon, vous allez devoir trouver des indices vitaux cachés ici pour aider vos partenaires. Décrochez votre talkie-walkie, car ils sont actuellement perdus dans un univers fantastique et sans vous, ils ne survivront pas à leur lancer de dés.`,
     parcours: 2, etape: 3, suivante: "The Belfius Heist", binome: "Fantasticouck",
     materiel: ["Pokémon 3D", "Pokéball", "QR code", "Feuille imprimée d'intro"],
+    pieces: [
+      { titre: "Table des Types", image: "/pokemon-types.png", caption: "Tableau des efficacités des types Pokémon" },
+    ],
     indices: [
       { num: 1, text: "Trouve les Couckémons et mets-les dans l'ordre. En suivant les instructions tu trouveras ta prochaine action." },
       { num: 2, text: "Quel type est super efficace contre le 1er ? Prends le mot entier." },
@@ -69,9 +72,9 @@ const ROOMS = [
     icon: "♥",
     color: "#FF6B8A",
     colorDark: "#B02040",
-    texte: `Bienvenue dans le sanctuaire d'Alex... ou plutôt, dans la matrice de son alter ego numérique. Dans cette dimension, l'amour de sa vie s'est fusionné avec une intelligence artificielle pour devenir Alex(IA). Elle contrôle tout, entend tout, dicte les règles, et elle est particulièrement exigeante aujourd'hui.\n\nVous allez devoir comprendre son langage et réussir à l'amadouer pour qu'elle vous livre votre précieux indice. Si la technologie se retourne contre vous ou que ses caprices vous dépassent, appelez vos partenaires à la rescousse. Ce sont eux, en pleine sueur au milieu d'un triathlon, qui vont dénicher la marche à suivre pour apaiser cette IA rebelle. Et n'oubliez pas le pacte de votre équipe : Alex(IA) possède l'itinéraire exact de leur course. Si vous ne leur dictez pas le bon chemin, ils risquent de courir dans le vide jusqu'à l'épuisement.`,
+    texte: `Bienvenue dans le sanctuaire d'Alexia, ou plutôt dans la matrice de son alter ego numérique Alex(IA). Dans cette dimension, l'amour de sa vie s'est fusionné avec une intelligence artificielle, ne la facher pas sous peine de faire d'Alex(IA) une ex IA. Elle contrôle tout, entend tout, dicte les règles, et elle est particulièrement exigeante aujourd'hui.\n\nVous allez devoir comprendre son langage et réussir à l'amadouer pour qu'elle vous livre votre précieux indice. Si la technologie se retourne contre vous ou que ses caprices vous dépassent, appelez vos partenaires à la rescousse. Ce sont eux, en pleine sueur au milieu d'un triathlon, qui vont dénicher la marche à suivre pour apaiser cette IA rebelle. Et n'oubliez pas le pacte de votre équipe : Alex(IA) possède l'itinéraire exact de leur course. Si vous ne leur dictez pas le bon chemin, ils risquent de courir dans le vide jusqu'à l'épuisement.`,
     parcours: 1, etape: 2, suivante: "Fantasticouck", binome: 'Le "Triathlon"',
-    materiel: ["Photos d'Alex modifiées par IA partout"],
+    materiel: ["Photos d'Alex modifiées par IA partout", "Elevenlabs"],
     indices: [
       { num: 1, text: "Voici la réponse à vos questions : 24 26 27 45 32 55 46 16 Q 54 29, peut-être comprendrez-vous en répondant à ses questions." },
       { num: 2, text: "Prenez gare au lexique de Lexia — ses énigmes vous ouvriront la voie." },
@@ -112,7 +115,7 @@ const ROOMS = [
     icon: "🎮",
     color: "#A080F8",
     colorDark: "#5030A0",
-    texte: null,
+    texte: `Coucke a toujours eu un faible pour les jeux vidéo, au point de parfois préférer le pro-gaming à la place du programming. Dans ce sanctuaire numérique, vous allez devoir prouver votre valeur manette en main (ou clavier sous les doigts). Votre objectif : accéder à sa plateforme secrète en déjouant sa sécurité pour le moins... approximative. Observez bien son setup de gamer, les indices sont sous vos yeux. Et n'oubliez pas de communiquer avec vos partenaires de l'autre côté de la réalité, ils pourraient avoir besoin de vous.`,
     parcours: 2, etape: 1, suivante: 'Le "Triathlon"', binome: "Jeux de Société",
     materiel: ["QR code vers app Vercel", "Clavier d'ordinateur et souris", "Manette de PlayStation", "Texte de gameur", "Indice de salle Jeux de société"],
     pieces: [
@@ -135,7 +138,7 @@ const ROOMS = [
     icon: "🎲",
     color: "#F0C060",
     colorDark: "#906000",
-    texte: null,
+    texte: `Qu'ils soient virtuels ou bien réels, Coucke est un fan inconditionnel de jeux. Mais attention, pour les jeux de société, c'est sacré : jamais après 21h ! Ici, pas d'écrans, juste des plateaux, des pièces et des cartes. Vous allez devoir faire chauffer vos méninges pour décrypter les stratégies laissées en suspens sur ces différents jeux. Échecs, go, cartes... chaque élément cache une partie de la réponse. Ouvrez l'œil, cherchez l'invisible, et surtout, collaborez avec l'équipe numérique qui joue en parallèle.`,
     parcours: 1, etape: 1, suivante: "Alex(ia)", binome: "Pro-Gaming",
     materiel: ["Jeu d'échecs", "Goban + règles de Goban", "Grille pour montrer le L2", "Jeu de cartes", "Bic encre invisible"],
     pieces: [
@@ -170,7 +173,7 @@ const ROOMS = [
     icon: "🏦",
     color: "#40DFA0",
     colorDark: "#106040",
-    texte: `Coucke est un data engineer hors pair. Mais aujourd'hui, ses talents servent une cause bien particulière. Bienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique.\n\nVotre mission : finir ce qu'il a commencé. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
+    texte: `Coucke n'aime pas rentrer trop tard. Les soirées cocoogaming, c'est bien — mais il y a un mariage à organiser, et ce mariage va coûter des millions. Heureusement, derrière le joueur passionné se cache un data engineer de talent. Et un data engineer de talent, ça trouve des solutions créatives.\n\nSa solution : hacker Belfius. Virer les fonds. Financer le mariage du siècle.\n\nBienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
     parcours: 2, etape: 4, suivante: "Pro-Gaming", loop: true,
     materiel: ["Ordinateur avec bash / terminal ouvert", "Logo Belfius imprimé", "Décoration Belfius"],
     pieces: [
@@ -200,6 +203,11 @@ const ROOMS = [
         label: "Dernier recours — La Commande",
         text: "Vous avez les 3 fragments ? Le format du code de transfert est : FRAGMENT1-FRAGMENT2-FRAGMENT3. Tapez : transfer [votre code]",
       },
+      {
+        num: 5,
+        label: "L'Attaque",
+        text: "La commande à run dans le terminal est bash launch_belfius_trojan_horse_attack_v3.sh",
+      },
     ],
     mj: {
       reponse: "Code final : 7734-GHOST-NEXUS → commande : transfer 7734-GHOST-NEXUS",
@@ -213,7 +221,7 @@ const ROOMS = [
     icon: "🔥",
     color: "#FF8040",
     colorDark: "#A03010",
-    texte: null,
+    texte: `Pendant que les hackers s'attaquent aux serveurs de Belfius, Coucke — trop flemmard pour bouger de son canapé — coordonne l'opération depuis chez lui. Il ne se lève pas. Il ne touche pas l'interrupteur. Sa maison lui obéit.\n\nVotre rôle : résoudre les énigmes de la planque de Coucke et transmettre les indices aux hackers en temps réel. Ils ne peuvent pas avancer sans vous — et le chrono tourne.`,
     parcours: 1, etape: 4, suivante: "Jeux de Société", loop: true,
     materiel: ["Blacklight (lampe UV)", "Lampe de chevet", "Google Home", "Prise connectée", "Horloge à aiguille", "Marqueur à encre invisible"],
     indices: [
@@ -230,6 +238,36 @@ const ROOMS = [
 ];
 
 export default function Indices() {
+  const printQR = () => {
+    const win = window.open('', '_blank');
+    win.document.write(`
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>QR Code Règles</title>
+          <style>
+            body { font-family: sans-serif; text-align: center; margin: 0; padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+            .qr-box { border: 1px dashed #ccc; padding: 15px; border-radius: 8px; }
+            .qr-box img { width: 100%; max-width: 150px; height: auto; }
+            .qr-title { font-size: 14px; font-weight: bold; margin-top: 10px; color: #333; }
+            @media print {
+              @page { margin: 10mm; size: A4; }
+              body { padding: 0; gap: 10px; }
+            }
+          </style>
+        </head>
+        <body>
+          ${Array(15).fill('<div class="qr-box"><img src="/qr-regles.png" alt="QR Code" /><div class="qr-title">📱 Scanner pour les règles</div></div>').join('')}
+        </body>
+      </html>
+    `);
+    win.document.close();
+    setTimeout(() => {
+      win.focus();
+      win.print();
+    }, 500);
+  };
+
   return (
     <>
       <Head>
@@ -386,6 +424,10 @@ export default function Indices() {
           .parcours-map {
             background: #111827; border-radius: 8px; padding: 24px 28px;
             margin-bottom: 40px; color: white;
+            overflow-x: auto;
+          }
+          .parcours-map-inner {
+            min-width: 700px;
           }
           .parcours-map-title {
             font-size: 11px; font-weight: 800; letter-spacing: 3px;
@@ -434,6 +476,22 @@ export default function Indices() {
             border-radius: 4px; margin-bottom: 4px; line-height: 1.3;
           }
           .binome-vs { font-size: 10px; color: #4B5563; margin: 4px 0; font-weight: 800; }
+
+          @media (max-width: 768px) {
+            .parcours-map-inner { min-width: auto; }
+            .parcours-row { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 24px !important; }
+            .parcours-steps { flex-wrap: wrap; gap: 8px 0; }
+            .binome-grid { grid-template-columns: repeat(2, 1fr); }
+            .room-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .room-header-num { margin-left: 0; }
+            .next-room { margin-left: 0; margin-top: 8px; }
+          }
+
+          @media (max-width: 480px) {
+            .binome-grid { grid-template-columns: 1fr; }
+            .indices-grid { grid-template-columns: 1fr; }
+            .pieces-grid { grid-template-columns: 1fr; }
+          }
 
           /* ---- NEXT ROOM BADGE ---- */
           .next-room {
@@ -501,6 +559,7 @@ export default function Indices() {
             .materiel-box { display: none; }
             .mj-card { display: none; }
             .btn-back { display: none; }
+            .hide-on-print { display: none !important; }
           }
         `}</style>
       </Head>
@@ -581,6 +640,15 @@ export default function Indices() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* QR CODE REGLES */}
+        <div className="room-section hide-on-print" style={{ background: 'white', padding: '24px', borderRadius: '8px', marginBottom: '40px', border: '2px dashed #ccc', textAlign: 'center' }}>
+          <div style={{ fontSize: '18px', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '8px' }}>📱 QR Code des Règles</div>
+          <div style={{ fontSize: '13px', color: '#666', marginBottom: '20px' }}>À imprimer en 15 exemplaires pour les distribuer ou les placer dans les salles.</div>
+          <img src="/qr-regles.png" alt="QR Code Règles" style={{ width: '150px', marginBottom: '20px', borderRadius: '4px', border: '1px solid #eee' }} />
+          <br/>
+          <button className="btn btn-print" onClick={printQR} style={{ background: '#1060A0' }}>🖨 Imprimer 15x sur une page</button>
         </div>
 
         {ROOMS.map((room, i) => (
