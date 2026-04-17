@@ -78,6 +78,7 @@ const ROOMS = [
     indices: [
       { num: 1, text: "Voici la réponse à vos questions : 24 26 27 45 32 55 46 16 Q 54 29, peut-être comprendrez-vous en répondant à ses questions." },
       { num: 2, text: "Prenez gare au lexique de Lexia — ses énigmes vous ouvriront la voie." },
+      { num: 3, text: "Appelez Alex(IA) directement : +32 460 25 60 44" },
     ],
     mj: {
       reponse: "Réponse aux énigmes : Sommeil / Confiance / Carte / Lunettes / Excuses → Code final : FANTASTIQUE",
@@ -176,42 +177,18 @@ const ROOMS = [
     texte: `Coucke n'aime pas rentrer trop tard. Les soirées cocoogaming, c'est bien — mais il y a un mariage à organiser, et ce mariage va coûter des millions. Heureusement, derrière le joueur passionné se cache un data engineer de talent. Et un data engineer de talent, ça trouve des solutions créatives.\n\nSa solution : hacker Belfius. Virer les fonds. Financer le mariage du siècle.\n\nBienvenue dans le centre névralgique de Belfius — ou plutôt, dans ce qu'il en reste après que notre ami s'y soit introduit par effraction numérique. Le terminal est ouvert, les fichiers sont là. Quelque part dans ce système se cachent trois fragments d'un code de transfert. Assemblez-les et déclenchez le virement. Fouillez, explorez, hackez. Mais faites vite — les administrateurs système ne dorment pas éternellement.`,
     parcours: 2, etape: 4, suivante: "Pro-Gaming", loop: true,
     materiel: ["Ordinateur avec bash / terminal ouvert", "Logo Belfius imprimé", "Décoration Belfius"],
-    pieces: [
-      {
-        titre: "Enveloppe #1 — Accès Système",
-        texte: "BELFIUS INTERNAL SYSTEM v2.4.1\n\nVos credentials d'accès :\n\nlogin    : phantom\npassword : DARKN3T\n\n⚠ Accès badge expirant à 06:00. Ne perdez pas de temps.",
-      },
-      {
-        titre: "Guide des commandes — Terminal Belfius",
-        terminal: true,
-        texte: "NAVIGUER\nls               → lister les fichiers du dossier\nls -a            → afficher aussi les fichiers cachés\ncd nom_dossier   → entrer dans un dossier\ncd ..            → remonter d'un niveau\npwd              → afficher où on est\n\nLIRE\ncat nom_fichier  → afficher le contenu d'un fichier\n\nCHERCHER\nfind . -name \"*mot*\"   → chercher un fichier par nom",
-      },
-    ],
+    pieces: [],
     indices: [
       {
         num: 1,
-        label: "Fragment 1 — Les Journaux",
-        text: "Une connexion suspecte a eu lieu cette nuit. Les journaux réseau enregistrent tout — chaque tentative, chaque intrusion. Le fragment que vous cherchez est un numéro de port. Un port 'normal' fait moins de 1024.",
+        label: "Enveloppe #1 — Accès Système",
+        text: "BELFIUS INTERNAL SYSTEM v2.4.1\n\nVos credentials d'accès :\n\nlogin    : phantom\npassword : DARKN3T\n\n⚠ Accès badge expirant à 06:00. Ne perdez pas de temps.",
       },
       {
         num: 2,
-        label: "Fragment 2 — Les Fichiers Cachés",
-        text: "Sur Linux, les fichiers secrets commencent par un point. La commande ls ne les montre pas par défaut. Il existe une option pour afficher absolument tout ce qui se trouve dans un dossier — y compris ce qu'on cherche à dissimuler.",
-      },
-      {
-        num: 3,
-        label: "Fragment 3 — Le Chiffrement",
-        text: "Le dernier fragment a été chiffré. Chaque lettre a été avancée de 3 rangs dans l'alphabet. Pour décoder, il faut reculer de 3. Le terminal dispose d'une commande pour ça.",
-      },
-      {
-        num: 4,
-        label: "Dernier recours — La Commande",
-        text: "Vous avez les 3 fragments ? Le format du code de transfert est : FRAGMENT1-FRAGMENT2-FRAGMENT3. Tapez : transfer [votre code]",
-      },
-      {
-        num: 5,
-        label: "L'Attaque",
-        text: "La commande à run dans le terminal est bash launch_belfius_trojan_horse_attack_v3.sh",
+        label: "Guide des commandes — Terminal Belfius",
+        terminal: true,
+        text: "NAVIGUER\nls               → lister les fichiers du dossier\nls -a            → afficher aussi les fichiers cachés\ncd nom_dossier   → entrer dans un dossier\ncd ..            → remonter d'un niveau\npwd              → afficher où on est\n\nLIRE\ncat nom_fichier  → afficher le contenu d'un fichier\n\nCHERCHER\nfind . -name \"*mot*\"   → chercher un fichier par nom",
       },
     ],
     mj: {
@@ -782,6 +759,43 @@ export default function Indices() {
             {room.indices.length > 0 ? (
               <div className="indices-grid">
                 {room.indices.map((ind) => (
+                  ind.terminal ? (
+                    <div key={ind.num} style={{ gridColumn: "1 / -1", background: "#0d1117", border: "1px solid #30363d", borderRadius: 8, overflow: "hidden", pageBreakInside: "avoid", breakInside: "avoid" }}>
+                      <div style={{ background: "#161b22", borderBottom: "1px solid #30363d", padding: "8px 14px", display: "flex", alignItems: "center", gap: 8 }}>
+                        <div style={{ display: "flex", gap: 6 }}>
+                          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#ff5f57" }} />
+                          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#febc2e" }} />
+                          <div style={{ width: 10, height: 10, borderRadius: "50%", background: "#28c840" }} />
+                        </div>
+                        <span style={{ fontSize: 11, color: "#8b949e", fontFamily: "monospace", marginLeft: 8 }}>phantom@belfius-system — bash</span>
+                        <div style={{ marginLeft: "auto", fontSize: 9, color: "#555", letterSpacing: 0.5 }}>✂ couper</div>
+                      </div>
+                      <div style={{ padding: "16px 20px" }}>
+                        <div style={{ fontSize: 11, color: "#8b949e", fontFamily: "monospace", marginBottom: 12, letterSpacing: 1, textTransform: "uppercase" }}>// {ind.label}</div>
+                        {ind.text.split("\n\n").map((block, bi) => (
+                          <div key={bi} style={{ marginBottom: 16 }}>
+                            {block.split("\n").map((line, li) => {
+                              const isSection = line === line.toUpperCase() && !line.includes("→") && line.trim().length > 0;
+                              const parts = line.split("→");
+                              return (
+                                <div key={li} style={{ fontFamily: "monospace", fontSize: 12, lineHeight: 1.8 }}>
+                                  {isSection ? (
+                                    <span style={{ color: "#58a6ff", fontWeight: 700, fontSize: 10, letterSpacing: 2 }}>{line}</span>
+                                  ) : line.trim().length > 0 ? (
+                                    <>
+                                      <span style={{ color: "#3fb950" }}>$ </span>
+                                      <span style={{ color: "#e6edf3" }}>{parts[0]}</span>
+                                      {parts[1] && <span style={{ color: "#8b949e" }}>→{parts[1]}</span>}
+                                    </>
+                                  ) : null}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
                   <div className="indice-card" key={ind.num}>
                     <div className="cut-hint">✂ couper</div>
                     <div className="indice-badge" style={{ background: room.colorDark }}>
@@ -789,8 +803,9 @@ export default function Indices() {
                     </div>
                     <div className="indice-num">Indice {ind.num}</div>
                     {ind.label && <div className="indice-label">{ind.label}</div>}
-                    <div className="indice-text">{ind.text}</div>
+                    <div className="indice-text" style={{ whiteSpace: "pre-line" }}>{ind.text}</div>
                   </div>
+                  )
                 ))}
                 {room.indices.length % 2 !== 0 && <div className="empty-slot">—</div>}
               </div>
